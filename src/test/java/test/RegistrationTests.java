@@ -55,7 +55,7 @@ public class RegistrationTests extends TestBase {
             $("#hobbiesWrapper").$(byText("Sports")).click();
         });
         step("Загрузить файл \"main-2.jpg\"", () -> {
-            $("#uploadPicture").uploadFromClasspath("img/main-2.jpg");
+            $("#uploadPicture").uploadFromClasspath("img/img.png");
         });
         step("В поле \"Current Address\" ввести адрес \"Proxladnaya street 28\"", () -> {
             $("#currentAddress").setValue("Proxladnaya street 28");
@@ -76,7 +76,7 @@ public class RegistrationTests extends TestBase {
             $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
             $(".table-responsive").shouldHave(text("Roman Filatov"), text("romanf@gmail.com"),
                     text("Male"), text("9085693730"), text("18 January,1982"), text("Physics"), text("Sports"),
-                    text("main-2.jpg"), text("Proxladnaya street 28"), text("Haryana Karnal"));
+                    text("img.png"), text("Proxladnaya street 28"), text("Haryana Karnal"));
         });
     }
 }
